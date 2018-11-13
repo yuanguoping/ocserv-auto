@@ -11,3 +11,10 @@ Auto Install Ocserv Server for CentOS&RedHat 7
 * 安装脚本会关闭 SELINUX；
 * 自带路由表，只有路由表里的 IP 才会走 VPN，如果你有需要添加的路由表可自行添加，最多支持 200 条；
 * 如果你有证书机构颁发的证书，可以把证书放到脚本的同目录下，确保文件名和脚本里的匹配，安装脚本会使用你的证书，客户端连接时不会提示证书错误。
+* 安装：
+cd ocserv-auto
+sh ocserv-auto
+* 新增用户
+ocpasswd -c /etc/ocserv/ocpasswd yeyiqu
+* 启动
+systemctl restart ocserv.service
